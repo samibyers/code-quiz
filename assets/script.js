@@ -1,4 +1,4 @@
-//view highscores
+/*//view highscores
 //make into link
 //link takes you to a page that stores highscore history
 
@@ -55,70 +55,46 @@ document.addEventListener('DOMContentLoaded', function() {
  
     var startBtn = document.getElementById('startBtn');
     startBtn.appendChild(button);
-}, false);
+}, false);*/
 
-//Commonly used data types DO NOT include:
-//choices: strings, booleans, alerts(T), numbers
-//Correct! with upper border or Wrong!
-var q1 = document.querySelector(".q1");
-q1.textContent = "Commonly used data types DO NOT include:";
-q1.className = "q1";
-console.log(q1);
+//variables
+var main = document.getElementsByTagName('main')[0]
+var viewHighscoreLink = document.getElementById('view_highscore_link')
+var timeDisplay = document.getElementById('time_display')
+var startQuizButton = document.getElementById('start_quiz_button')
+var questionNumbersBox = document.getElementById('question_numbers_box')
+var questionDisplay = document.getElementById('question_display')
+var answersList = document.getElementById('answer_list')
+var answerFeedback = document.getElementById('feedback')
+var scoreDisplay = document.getElementById('score_display')
+var initialsInput = document.getElementById('initials_input')
+var submitInitialsButton = document.getElementById('submit_initials_button')
+var highscoreList = document.getElementById('highscore_list')
+var goToStartingPageButton = document.getElementById('go_to_starting_page_button')
+var clearHighscoresButton = document.getElementById('clear_highscores_button')
 
-var strings = false
-var booleans = false
-var alerts = true
-var numbers = false
-//or maybe make an array with buttons??
-var choices = ["stringsBtn", "booleansBtn", "alertsBtn", "numbersBtn"]
-if (choices[2]) {
-    console.log("Correct!")
-} else {
-    console.log ("Wrong!")
-}
-
-//The condition in an if/ else statement is enclosed within ____.
-//choices: quotes, curly brackets(T), parentheses, square brackets 
-//Correct! with upper border or Wrong!
-var q2 = document.querySelector(".q2");
-q2.textContent = "The condition in an if/ else statement is enclosed within ____.";
-q2.className = "q2";
-console.log(q2);
-
-var quotes = false
-var curlyBrackets = true
-var parentheses = false
-var squareBrackets = false
-//maybe make it into a fuction
-var q3 = function () {
-    if (curlyBrackets) {
-    console.log("Correct!")
-} else {
-    console.log("Wrong!")
-}
-}
+//Questions and answers Array
+const questions = [ 
+    {
+        "question": "Commonly used data types DO NOT include:",
+        "answers": ["strings", "booleans", "alerts", "numbers"],
+        "correct_index": 2
+    }, {
+        "question": "The condition in an if/ else statement is enclosed within ____.",
+        "answers": ["quotes", "curly brackets", "parentheses", "square brackets"],
+        "correct_index": 1
+    }, {
+        "question": "Arrays in JavaScript can be used to store ____.",
+        "answers": ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        "correct_index": 3
+    }
+]
 
 
-//Arrays in JavaScript can be used to store ____.
-//choices: numbers and strings, other arrays, booleans, all of the above(T)
-//Correct! with upper border or Wrong!
-var q3 = document.querySelector(".q3");
-q3.textContent = "Arrays in JavaScript can be used to store ____.";
-q3.className = "q3";
-console.log(q3);
 
-var numbersAndStrings = false
-var otherArrays = false
-var booleans = false
-var allOfTheAbove = true
-if (allOfTheAbove) {
-    console.log("Correct!")
-} else {
-    console.log("Wrong!")
-}
+//need wrong and correct pop ups
     
-    
-    
+     
 //All done!
 //Your final score is (score) = to number of seconds
 //enter initials (form), button: Submit
