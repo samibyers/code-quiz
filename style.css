@@ -1,0 +1,17 @@
+/*styles the "Coding Quiz Challenge" title*/
+.title {
+
+}
+/*styles the directions for the quiz under the title*/
+.instructions {
+
+}
+/*styles the "start quiz" button*/
+.startBtn {
+    font-size: 14px;
+    margin: 8px;
+    padding: 0 10px;
+    line-height: 2;
+}
+
+
