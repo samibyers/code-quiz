@@ -1,6 +1,15 @@
-//view highscores
-//make into link
-//link takes you to a page that stores highscore history
+//variables
+var startBtn = document.querySelector("#startBtn");
+//var viewHighscores = document.querySelector("#highscoresLink");
+var hideStartPage = document.querySelector("#startPage");
+var question1 = document.querySelector(".question1");
+var question2 = document.querySelector(".question2");
+var question3 = document.querySelector(".question3");
+
+//make sure the questions are hidden to begin
+question1.style.display = "none";
+question2.style.display = "none";
+question3.style.display = "none";
 
 //timer
 var timer = document.querySelector("#time");
@@ -13,69 +22,49 @@ function quizTimer() {
      
      if(secondsLeft ===0) {
          clearInterval(timerInterval);
-         sendMessage();
+         outOfTime();
      }
     }, 1000);
 }
 
-function sendMessage () {
+function outOfTime () {
  timer.textContent = "You Lose!";
 
 }
 quizTimer();
 
+//clicking the "start quiz" button hides the start page
+startBtn.onclick = function(){
+console.log("start quiz")
+hideStartPage.style.display = "none"
+//the click also brings you to the first question page
+question1.style.display = "initial"
+}
 
-//Coding Quiz Challenge 
-//Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!
-//button (Start Quiz)
+//when you click on the correct answer, you are taken to the next question //you also get a "correct!" message
 
-//dynamically add title to starting page
-
-//dynamically add instructions to starting page
-
-
-
-//dynamically added start button (borrowed from the interweb)
-
-
-//variables
+//if you click on any of the wrong answers, you get a "wrong!" message and you are returned to make another choice //you also lose 10 seconds from the timer
 
 
-//Questions and answers Array
-const questions = [ 
+//Questions and answers Array... don't know if i can figure out how to use this...
+/*
+const Allquestions = [ 
     {
-        "question": "Commonly used data types DO NOT include:",
-        "answers": ["strings", "booleans", "alerts", "numbers"],
-        "correct_index": 2
+        question: "Commonly used data types DO NOT include:",
+        answers: ["strings", "booleans", "alerts", "numbers"],
+        correctIndex: 2
     }, {
-        "question": "The condition in an if/ else statement is enclosed within ____.",
-        "answers": ["quotes", "curly brackets", "parentheses", "square brackets"],
-        "correct_index": 1
+        question: "The condition in an if/ else statement is enclosed within ____.",
+        answers: ["quotes", "curly brackets", "parentheses", 
+        'square brackets"],
+        correctIndex: 1
     }, {
-        "question": "Arrays in JavaScript can be used to store ____.",
-        "answers": ["numbers and strings", "other arrays", "booleans", "all of the above"],
-        "correct_index": 3
+        question: "Arrays in JavaScript can be used to store ____.",
+        answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        correctIndex: 3
     }
 ]
-
-
-
-//need wrong and correct pop ups
-    
-     
-//All done!
-//Your final score is (score) = to number of seconds
-//enter initials (form), button: Submit
-
-/*let btn = document.createElement("button");
-btn.innerHTML = "Submit";
-btn.type = "submit";
-btn.name = "formBtn";
-document.body.appendChild(btn);*/
-
-//Highscores 
-//scores are displayed and saved
-// button: Go Back, button: clear highscores
+*/
 
 
 

@@ -18,15 +18,43 @@
     <!--Starting page that starts the quiz-->
     <main>
         <div id="startPage">
-            <h1>Coding Quiz Challenge!</h1>
+            <h1 class="qStyle">Coding Quiz Challenge!</h1>
                 <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!
                 </p>
-        </div>
-        <div id="startBtn">
-            <button class="buttons">Start Quiz</button>
+        
+            <div id="startBtn">
+                <button class="buttons">Start Quiz</button>
+            </div>
         </div>
         
-        
+        <div class="question1">
+            <h1 class="qStyle">Commonly used data types DO NOT include:</h1>
+                <ul class="aStyle">
+                    <li><button class="buttons">strings</button></li>
+                    <li><button class="buttons">booleans</button></li>
+                    <li><button class="buttons">alerts</button></li><!--correct-->
+                    <li><button class="buttons">numbers</button></li>
+                </ul>
+        </div>
+        <div class="question2">
+            <h1 class="qStyle">The condition in an if/ else statement is enclosed within ____.</h1>
+                <ul class="aStyle">
+                    <li><button class="buttons">quotes</button></li>
+                    <li><button class="buttons">curly brackets</button></li><!--correct-->
+                    <li><button class="buttons">parentheses</button></li>
+                    <li><button class="buttons">square brackets</button></li>
+                </ul>
+        </div>
+        <div class="question3">
+            <h1>Arrays in JavaScript can be used to store ____.</h1>
+                <ul class="aStyle">
+                    <li><button class="buttons">numbers and strings</button></li>
+                    <li><button class="buttons">other arrays</button></li>
+                    <li><button class="buttons">booleans</button></li>
+                    <li><button class="buttons">all of the above</button></li><!--correct-->
+                </ul>
+        </div>   
+    
     </main>    
     <!--link to the JavaScript file-->
     <script src="./assets/script.js"></script>

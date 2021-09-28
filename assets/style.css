@@ -39,9 +39,19 @@
     color: white;
     background: rgb(94, 64, 134);
     border-radius: 10%;
-    padding: 0.5%;
+    padding: 0.2%;
 }
-
+/*gives all the buttons an effect when you hover over them*/
 .buttons:hover {
     opacity: 75%;
+}
+/*styles all the questions*/
+.qStyle {
+    text-align: center;
+    font-size: 125%;
+    padding: 5%;
+}
+/*styles all the answers*/
+.aStyle {
+    
 }
