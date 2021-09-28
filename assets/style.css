@@ -1,17 +1,47 @@
-/*styles the "Coding Quiz Challenge" title*/
-.title {
-
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/*styles the directions for the quiz under the title*/
-.instructions {
-
+/*styles the timer*/
+#time {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
 }
-/*styles the "start quiz" button*/
-.startBtn {
-    font-size: 14px;
-    margin: 8px;
-    padding: 0 10px;
-    line-height: 2;
+/*styles the "view highscores" link*/
+#highscoresLink {
+    display:flex;
+    justify-content: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+/*styles all the text content for the start page*/
+#startPage {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+/*styles the "coding quiz challenge"*/
+#startPage h1 {
+    padding: 5%;
+    font-size: 175%;
+}
+/*styles the start button only*/
+#startBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2%;
+   
+}
+/*styles all the buttons*/
+.buttons {
+    color: white;
+    background: rgb(94, 64, 134);
+    border-radius: 10%;
+    padding: 0.5%;
 }
 
-
+.buttons:hover {
+    opacity: 75%;
+}
