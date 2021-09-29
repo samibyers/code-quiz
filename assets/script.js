@@ -12,6 +12,10 @@ var answer3 = document.querySelector(".answer3")
 var answer4 =  document.querySelector(".answer4")
 var highscorePage = document.querySelector("#highscorePage")
 var allDonePage = document.querySelector("#allDonePage")
+var highscoresLink = document.querySelector("#highscoresLink")
+var goBack = document.querySelector("#goBack")
+var clearHighscores = document.querySelector("#clearHighscores")
+var submitBtn = document.querySelector("#submitBtn")
 var timerInterval;
 var arrayIndex = 0;
 //add an event listener for clicking the answer button that takes you to the checkAnswer function
@@ -19,12 +23,18 @@ answer1.addEventListener("click", checkAnswer)
 answer2.addEventListener("click", checkAnswer)
 answer3.addEventListener("click", checkAnswer)
 answer4.addEventListener("click", checkAnswer)
+//add event listener to clicking the view highscores link that takes you to the highscores function
+highscoresLink.addEventListener("click", viewHighscores)
+//add event listener for the "go back" button and the "clear highscores" button
+goBack.addEventListener("click", backToStart)
+clearHighscores.addEventListener("click", clearTheScores)
+//add event listener for the submit button
+submitBtn.addEventListener("click", submitScore)
 //make sure the questions are hidden to begin
 questionSection.style.display = "none"
+//also hide the all done page and highscores page
 highscorePage.style.display = "none"
 allDonePage.style.display = "none"
-//also hide the all done page and highscores page
-
 //an array of all the questions and answers and correct answers
 const allQuestions = [ 
     {
@@ -48,12 +58,11 @@ const allQuestions = [
         question: "What are boolean data type values?",
         answers: ["1 and 2", "yes and no", "true and false", "right and wrong"],
         correctAnswer: "yes and no"
-    }, {
+    }, { //oh no. This causes issues when you go through the entire quiz and go back from the view highscores page...... 
         question: "This is a placeholder question.",
         answers: ["1","2","3","4"],
         correctAnswer: "1"
     }
-
 ]
 //timer 
 var timer = document.querySelector("#time");
@@ -87,7 +96,6 @@ function renderQuestions() {
     answer2.textContent = allQuestions[arrayIndex].answers[1]
     answer3.textContent = allQuestions[arrayIndex].answers[2]
     answer4.textContent = allQuestions[arrayIndex].answers[3]
-
 }
 //when the timer runs out, it displays an out of time message and takes the user to the all done page
 function outOfTime () {
@@ -96,12 +104,11 @@ function outOfTime () {
         timer.textContent = "Out of Time!";
         questionSection.style.display = "none"
         allDonePage.style.display = "initial" 
+        highscorePage.style.display = "none"
         //user score equals 0
         score.textContent = secondsLeft + " is your final score."
     }
 }
-
-
 //this function checks whether you clicked on the right answer and takes you to the next question. if the timer runs out, it displays you lose
 function checkAnswer(event) {
     console.log(event.target.textContent)
@@ -127,15 +134,31 @@ function checkAnswer(event) {
 function finalScore() {
     var score = document.querySelector("#score")
     score.textContent = secondsLeft+10 + " is your final score."
-    
 }
 
+function viewHighscores() {
+    console.log("hi")
+    hideStartPage.style.display = "none"
+    highscorePage.style.display = "initial"
+    questionSection.style.display = "none"
+    allDonePage.style.display = "none"
+}
 
+function backToStart(){
+    highscorePage.style.display = "none"
+    hideStartPage.style.display = "initial"
+}
 
+function clearTheScores() {
 
-//when you click the answer for the last question it takes you to the all done page
+}
 
-//the alldone page displays your score as the time left on the clock when you finished the quiz
+function submitScore() {
+    allDonePage.style.display = "none"
+    highscorePage.style.display = "initial"
+}
+
+//when the correct answer is selected, the message "correct" displays and when the wrong answer is selected, the message "wrong" displays
 
 //you can enter your initials in the all done page form and submit them to the highscores page
 

@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <!--link to the highscores-->
-        <a id="highscoresLink" href="#">View Highscores</a>
+        <a id="highscoresLink" href="#highscorePage">View Highscores</a>
         <!--Timer-->
          <span id="time">Time: <span id="timeLeft">0</span></span>
     </header>
@@ -46,9 +46,10 @@
         </div>
         <div id="highscorePage">
             <h1>Highscores</h1>
-            <div id="highscores"></div>
-            <button id="goBack" class="buttons">Go Back</button>
-            <button id="clearHighscores" class="buttons">Clear Highscores</button>
+            <div id="startBtn highscores">
+                <button id="goBack" class="buttons">Go Back</button>
+                <button id="clearHighscores" class="buttons">Clear Highscores</button>
+            </div>    
         </div>
     </main>    
     <!--link to the JavaScript file-->

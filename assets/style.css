@@ -72,3 +72,13 @@
 .spacing {
     padding:1%;
 }
+
+#highscorePage {
+    text-align: center;
+}
+
+#highscorePage h1 {
+    padding: 5%;
+    font-size: 175%;
+}
+
