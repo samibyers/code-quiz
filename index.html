@@ -36,10 +36,43 @@
                     <li><button class="buttons answer4"></button></li>
                 </ul>
         </div>
-        
-    
+        <div id="allDonePage">
+            <h1>All done!</h1>
+            <p><span id="score"></span></p>
+            <p>Enter initials:
+                <input type="text" class="initials" id="initialsEntry">
+                <button class="buttons" id="submitBtn">Submit</button>
+            </p>
+        </div>
+        <div id="highscorePage">
+            <h1>Highscores</h1>
+            <div id="highscores"></div>
+            <button id="goBack" class="buttons">Go Back</button>
+            <button id="clearHighscores" class="buttons">Clear Highscores</button>
+        </div>
     </main>    
     <!--link to the JavaScript file-->
     <script src="./assets/script.js"></script>
 </body>
 </html>
+<!--<section id="get_name_page" class="page hidden">
+    <h2>All done!</h2>
+
+    <p>Your final score is <span id="score_display"></span>.</p>
+
+    <br>
+
+    <p>Enter initials: 
+        <input type="text" name="initials" id="initials_input">
+        <button id="submit_initials_button">Submit</button>
+    </p>
+</section>
+
+<section id="highscore_page" class="page hidden">
+    <h2>Highscores</h2>
+
+    <div id="highscore_list"></div>
+
+    <button id="go_to_starting_page_button">Go Back</button>
+    <button id="clear_highscores_button">Clear Highscores</button>
+</section>-->

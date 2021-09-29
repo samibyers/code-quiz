@@ -2,7 +2,6 @@
 
 //variables
 var startBtn = document.querySelector("#startBtn");
-//var viewHighscores = document.querySelector("#highscoresLink");
 var hideStartPage = document.querySelector("#startPage");
 var question1 = document.querySelector(".question1");
 var questionSection = document.querySelector(".questionSection")
@@ -11,6 +10,8 @@ var answer1 = document.querySelector(".answer1")
 var answer2 =  document.querySelector(".answer2")
 var answer3 = document.querySelector(".answer3")
 var answer4 =  document.querySelector(".answer4")
+var highscorePage = document.querySelector("#highscorePage")
+var allDonePage = document.querySelector("#allDonePage")
 var timerInterval;
 var arrayIndex = 0;
 //add an event listener for clicking the answer button that takes you to the checkAnswer function
@@ -20,6 +21,10 @@ answer3.addEventListener("click", checkAnswer)
 answer4.addEventListener("click", checkAnswer)
 //make sure the questions are hidden to begin
 questionSection.style.display = "none"
+highscorePage.style.display = "none"
+allDonePage.style.display = "none"
+//also hide the all done page and highscores page
+
 //an array of all the questions and answers and correct answers
 const allQuestions = [ 
     {
@@ -43,7 +48,12 @@ const allQuestions = [
         question: "What are boolean data type values?",
         answers: ["1 and 2", "yes and no", "true and false", "right and wrong"],
         correctAnswer: "yes and no"
+    }, {
+        question: "This is a placeholder question.",
+        answers: ["1","2","3","4"],
+        correctAnswer: "1"
     }
+
 ]
 //timer 
 var timer = document.querySelector("#time");
@@ -79,11 +89,19 @@ function renderQuestions() {
     answer4.textContent = allQuestions[arrayIndex].answers[3]
 
 }
-//when the timer runs out, it displays an out of time message
+//when the timer runs out, it displays an out of time message and takes the user to the all done page
 function outOfTime () {
- timer.textContent = "You Lose!";
-
+    if(secondsLeft ===0) {
+        clearInterval(timerInterval);
+        timer.textContent = "Out of Time!";
+        questionSection.style.display = "none"
+        allDonePage.style.display = "initial" 
+        //user score equals 0
+        score.textContent = secondsLeft + " is your final score."
+    }
 }
+
+
 //this function checks whether you clicked on the right answer and takes you to the next question. if the timer runs out, it displays you lose
 function checkAnswer(event) {
     console.log(event.target.textContent)
@@ -97,26 +115,40 @@ function checkAnswer(event) {
         arrayIndex++
         renderQuestions()
     }
-    if(secondsLeft ===0) {
+    if (arrayIndex === 5) {
         clearInterval(timerInterval);
-        outOfTime();
+        timer.textContent = secondsLeft+10 + " Good Job!";
+        finalScore()
+        questionSection.style.display = "none"
+        allDonePage.style.display = "initial" 
     }
+}
+
+function finalScore() {
+    var score = document.querySelector("#score")
+    score.textContent = secondsLeft+10 + " is your final score."
 }
 
 
 
 
+//when you click the answer for the last question it takes you to the all done page
+
+//the alldone page displays your score as the time left on the clock when you finished the quiz
+
+//you can enter your initials in the all done page form and submit them to the highscores page
+
+//clicking the button hides the all done page and takes you to the highscore page and your score is submitted
+
+//the highscore page diplays the previous scores 
+
+//the user can click a button that takes them back to the start quiz page or a button that clears the highscores
 
 
-//display "Corrrect!"
-       
-
-//when you click on the correct answer, you are taken to the next question //you also get a "correct!" message
-
-//if you click on any of the wrong answers, you get a "wrong!" message and you are returned to make another choice //you also lose 10 seconds from the timer
 
 
-//Questions and answers Array... don't know if i can figure out how to use this...
+
+
 
 
 
