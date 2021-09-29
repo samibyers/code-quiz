@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <!--link to the highscores-->
         <a id="highscoresLink" href="#">View Highscores</a>
         <!--Timer-->
@@ -27,19 +27,19 @@
             </div>
         </div>
         
-        <div class="questionSection">
+        <div class="questionSection qStyle">
             <h1 class="qStyle question" ></h1>
                 <ul class="aStyle">
-                    <li><button class="buttons answer1"></button></li>
-                    <li><button class="buttons answer2"></button></li>
-                    <li><button class="buttons answer3"></button></li><!--correct-->
-                    <li><button class="buttons answer4"></button></li>
+                    <li class="spacing"><button class="buttons answer1"></button></li>
+                    <li class="spacing"><button class="buttons answer2"></button></li>
+                    <li class="spacing"><button class="buttons answer3"></button></li><!--correct-->
+                    <li class="spacing"><button class="buttons answer4"></button></li>
                 </ul>
         </div>
         <div id="allDonePage">
-            <h1>All done!</h1>
+            <h1 class="qStyle">All done!</h1>
             <p><span id="score"></span></p>
-            <p>Enter initials:
+            <p id="form-input">Enter initials:
                 <input type="text" class="initials" id="initialsEntry">
                 <button class="buttons" id="submitBtn">Submit</button>
             </p>
@@ -55,24 +55,4 @@
     <script src="./assets/script.js"></script>
 </body>
 </html>
-<!--<section id="get_name_page" class="page hidden">
-    <h2>All done!</h2>
 
-    <p>Your final score is <span id="score_display"></span>.</p>
-
-    <br>
-
-    <p>Enter initials: 
-        <input type="text" name="initials" id="initials_input">
-        <button id="submit_initials_button">Submit</button>
-    </p>
-</section>
-
-<section id="highscore_page" class="page hidden">
-    <h2>Highscores</h2>
-
-    <div id="highscore_list"></div>
-
-    <button id="go_to_starting_page_button">Go Back</button>
-    <button id="clear_highscores_button">Clear Highscores</button>
-</section>-->

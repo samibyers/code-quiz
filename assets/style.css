@@ -1,18 +1,21 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+}
 /*styles the timer*/
 #time {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 /*styles the "view highscores" link*/
 #highscoresLink {
-    display:flex;
-    justify-content: left;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-top: 5px;
+    text-decoration: none;
+    color:blue;
 }
 /*styles all the text content for the start page*/
 #startPage {
@@ -32,14 +35,14 @@
     justify-content: center;
     align-items: center;
     margin:2%;
-   
+   font-size: 150%;
 }
 /*styles all the buttons*/
 .buttons {
     color: white;
     background: rgb(94, 64, 134);
     border-radius: 10%;
-    padding: 0.2%;
+    padding: 1%;
 }
 /*gives all the buttons an effect when you hover over them*/
 .buttons:hover {
@@ -47,11 +50,25 @@
 }
 /*styles all the questions*/
 .qStyle {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 125%;
     padding: 5%;
 }
 /*styles all the answers*/
 .aStyle {
-    text-align: center; 
+   margin-left: 15%;
+}
+
+#allDonePage {
+    text-align: center;
+    font-size: 125%; 
+}
+
+#form-input {
+    margin-top: 5%;
+}
+
+.spacing {
+    padding:1%;
 }

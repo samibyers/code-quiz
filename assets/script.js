@@ -127,6 +127,7 @@ function checkAnswer(event) {
 function finalScore() {
     var score = document.querySelector("#score")
     score.textContent = secondsLeft+10 + " is your final score."
+    
 }
 
 
